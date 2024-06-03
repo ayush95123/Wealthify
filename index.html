@@ -5,30 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
+    <script defer type="module" src="script.js"></script>
   </head>
-  <body class="bg-black h-screen flex">
-    <nav class="navbar flex flex-col w-2/12 h-full bg-black justify-between">
+  <body class="bg-black max-w-screen h-screen scrollbar-hide">
+    <nav
+      class="navbar flex flex-col w-1/12 md:w-2/12 h-full justify-between fixed top-0 left-0"
+    >
       <!-- <div class="upperNav h-full w-full flex flex-col items-center justify-center"> -->
-      <div class="logoDiv w-full h-1/6 p-2 flex items-center justify-center ">
-        <img src="/img/logo.png" class="logoImg max-h-full min-h-max hidden xl:block " alt="LOGO" />
-        <img src="/img/shortLogo.png" class="shortLogoImg  max-h-full min-h-max block xl:hidden " alt="LOGO" />
+      <div class="logoDiv w-full h-1/6 xxs:p-1 xs:p-2 items-center justify-center flex">
+        <img
+          src="/img/logo.png"
+          class="logoImg max-h-full hidden xl:block"
+          alt="LOGO"
+        />
+        <img
+          src="/img/shortLogo.png"
+          class="shortLogoImg h-3 w-3 xxs:h-5 xxs:w-5 xs:h-10 xs:w-10 md:h-14 md:w-14 xl:h-16 xl:w-16  xl:hidden"
+          alt="LOGO"
+        />
       </div>
       <!-- End of Logo -->
-      <div class="navTabs flex w-full h-5/6">
-        <div class="navLeftSideEmpty w-1/5 h-full hidden xl:inline-block"></div>
+      <div class="navTabs flex w-full h-full sm:h-5/6 overflow-y-auto scrollbar-hide">
+        <div class="navLeftSideEmpty w-1/5 h-full hidden lg:inline-block"></div>
         <div
-          class="navRightSideTabContents flex flex-col justify-between w-4/5 h-full"
+          class="navRightSideTabContents flex flex-col justify-between w-full xl:w-4/5 h-full space-y-5 xs:space-y-10"
         >
-          <div class="navBarTopItems w-full ml-2 flex flex-col items-center md:items-start xl:ml-0">
+          <div
+            class="navBarTopItems w-full flex flex-col items-center md:items-start xl:ml-0 justify-start portrait:space-y-8 4k:space-y-14 min-h-max"
+          >
             <div
-              class="navProfile border border-none rounded-xl h-max w-full my-3 px-2 py-1 flex justify-center md:justify-start items-center cursor-pointer hover:bg-gray-900 hover:w-max hover:px-3"
+              class="navProfile border border-none rounded-xl h-max w-full my-2 md:my-3 px-2 py-1 flex justify-center lg:justify-start items-center cursor-pointer hover:bg-gray-900 hover:w-max hover:px-3"
             >
               <div class="icon">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 448 512"
                   fill="#fcfcfc"
-                  class="h-4 w-4"
+                  class="h-3 w-3 xs:h-4 2xl:h-7 3xl:h10 4xl:h-12 xs:w-4 2xl:w-7 3xl:w-10 4xl:w-12 "
                 >
                   <path
                     d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"
@@ -36,21 +49,21 @@
                 </svg>
               </div>
               <div
-                class="tag ml-7 text-base text-slate-50 font-medium hidden md:inline-block break-words overflow-clip "
+                class="tag ml-7 text-xs xl:text-base 2xl:text-lg 4xl:text-3xl text-slate-50 font-medium hidden lg:inline-block break-words overflow-clip"
               >
                 Profile
               </div>
             </div>
             <!--End of Profile -->
             <div
-              class="navAccounts border border-none rounded-xl h-max w-full my-3 px-2 py-1 flex justify-center md:justify-start items-center cursor-pointer hover:bg-gray-900 hover:w-max hover:px-3"
+              class="navAccounts border border-none rounded-xl h-max w-full my-2 md:my-3 px-2 py-1 flex justify-center lg:justify-start items-center cursor-pointer hover:bg-gray-900 hover:w-max hover:px-3"
             >
               <div class="icon">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 640 512"
                   fill="#fcfcfc"
-                  class="h-4 w-4"
+                  class="h-3 w-3 xs:h-4 2xl:h-7 3xl:h10 4xl:h-12 xs:w-4 2xl:w-7 3xl:w-10 4xl:w-12 "
                 >
                   <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
                   <path
@@ -59,21 +72,21 @@
                 </svg>
               </div>
               <div
-                class="tag ml-7 text-base text-slate-50 font-medium hidden md:inline-block break-words overflow-clip"
+                class="tag ml-7 text-xs xl:text-base 2xl:text-lg 4xl:text-3xl text-slate-50 font-medium hidden lg:inline-block break-words overflow-clip"
               >
                 My Accounts
               </div>
             </div>
             <!-- End of Accounts -->
             <div
-              class="navMoneyTransfer border border-none rounded-xl h-max w-full  my-3 px-2 py-1 flex justify-center md:justify-start items-center cursor-pointer hover:bg-gray-900 hover:w-max hover:px-3 "
+              class="navMoneyTransfer border border-none rounded-xl h-max w-full my-2 md:my-3 px-2 py-1 flex justify-center lg:justify-start items-center cursor-pointer hover:bg-gray-900 hover:w-max hover:px-3"
             >
               <div class="icon">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 640 512"
                   fill="#fcfcfc"
-                  class="h-4 w-4"
+                  class="h-3 w-3 xs:h-4 2xl:h-7 3xl:h10 4xl:h-12 xs:w-4 2xl:w-7 3xl:w-10 4xl:w-12 "
                 >
                   <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
                   <path
@@ -81,20 +94,22 @@
                   />
                 </svg>
               </div>
-              <div class="tag ml-7 text-base  text-slate-50 font-medium hidden md:inline-block break-words overflow-clip">
-                Money Transfer
+              <div
+                class="tag ml-7 text-xs xl:text-base 2xl:text-lg 4xl:text-3xl text-slate-50 font-medium hidden lg:inline-block break-words overflow-clip"
+              >
+                Transactions
               </div>
             </div>
             <!-- End of Money Transfer -->
             <div
-              class="navStatement border border-none rounded-xl h-max w-full my-3 px-2 py-1 flex justify-center md:justify-start items-center cursor-pointer hover:bg-gray-900 hover:w-max hover:px-3"
+              class="navStatement border border-none rounded-xl h-max w-full my-2 md:my-3 px-2 py-1 flex justify-center lg:justify-start items-center cursor-pointer hover:bg-gray-900 hover:w-max hover:px-3"
             >
               <div class="icon">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 384 512"
                   fill="#fcfcfc"
-                  class="h-4 w-4"
+                  class="h-3 w-3 xs:h-4 2xl:h-7 3xl:h10 4xl:h-12 xs:w-4 2xl:w-7 3xl:w-10 4xl:w-12 "
                 >
                   <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
                   <path
@@ -102,20 +117,22 @@
                   />
                 </svg>
               </div>
-              <div class="tag ml-7 text-base text-slate-50 font-medium hidden md:inline-block break-words overflow-clip">
+              <div
+                class="tag ml-7 text-xs xl:text-base 2xl:text-lg 4xl:text-3xl text-slate-50 font-medium hidden lg:inline-block break-words overflow-clip"
+              >
                 Statement
               </div>
             </div>
             <!-- End of Statement -->
             <div
-              class="navCards border border-none rounded-xl h-max w-full my-3 px-2 py-1 flex justify-center md:justify-start items-center cursor-pointer hover:bg-gray-900 hover:w-max hover:px-3"
+              class="navCards border border-none rounded-xl h-max w-full my-2 md:my-3 px-2 py-1 flex justify-center lg:justify-start items-center cursor-pointer hover:bg-gray-900 hover:w-max hover:px-3"
             >
               <div class="icon">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 576 512"
                   fill="#fcfcfc"
-                  class="h-4 w-4"
+                  class="h-3 w-3 xs:h-4 2xl:h-7 3xl:h10 4xl:h-12 xs:w-4 2xl:w-7 3xl:w-10 4xl:w-12 "
                 >
                   <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
                   <path
@@ -123,20 +140,22 @@
                   />
                 </svg>
               </div>
-              <div class="tag ml-7 text-base text-slate-50 font-medium hidden md:inline-block break-words overflow-clip">
+              <div
+                class="tag ml-7 text-xs xl:text-base 2xl:text-lg 4xl:text-3xl text-slate-50 font-medium hidden lg:inline-block break-words overflow-clip"
+              >
                 My Cards
               </div>
             </div>
             <!-- End of Cards -->
             <div
-              class="navBeneficiaries border border-none rounded-xl h-max w-full my-3 px-2 py-1 flex justify-center md:justify-start items-center cursor-pointer hover:bg-gray-900 hover:w-max hover:px-3"
+              class="navBeneficiaries border border-none rounded-xl h-max w-full my-2 md:my-3 px-2 py-1 flex justify-center lg:justify-start items-center cursor-pointer hover:bg-gray-900 hover:w-max hover:px-3"
             >
               <div class="icon">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 640 512"
                   fill="#fcfcfc"
-                  class="h-4 w-4"
+                  class="h-3 w-3 xs:h-4 2xl:h-7 3xl:h10 4xl:h-12 xs:w-4 2xl:w-7 3xl:w-10 4xl:w-12 "
                 >
                   <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
                   <path
@@ -144,20 +163,22 @@
                   />
                 </svg>
               </div>
-              <div class="tag ml-7 text-base text-slate-50 font-medium hidden md:inline-block break-words overflow-clip">
+              <div
+                class="tag ml-7 text-xs xl:text-base 2xl:text-lg 4xl:text-3xl text-slate-50 font-medium hidden lg:inline-block break-words overflow-clip"
+              >
                 <p>Beneficiaries</p>
               </div>
             </div>
             <!-- End of Beneficiaries -->
             <div
-              class="navLoans border border-none rounded-xl h-max w-full my-3 px-2 py-1 flex justify-center md:justify-start items-center cursor-pointer hover:bg-gray-900 hover:w-max hover:px-3"
+              class="navLoans border border-none rounded-xl h-max w-full my-2 md:my-3 px-2 py-1 flex justify-center lg:justify-start items-center cursor-pointer hover:bg-gray-900 hover:w-max hover:px-3"
             >
               <div class="icon">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 576 512"
                   fill="#fcfcfc"
-                  class="h-4 w-4"
+                  class="h-3 w-3 xs:h-4 2xl:h-7 3xl:h10 4xl:h-12 xs:w-4 2xl:w-7 3xl:w-10 4xl:w-12 "
                 >
                   <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
                   <path
@@ -165,20 +186,22 @@
                   />
                 </svg>
               </div>
-              <div class="tag ml-7 text-base text-slate-50 font-medium hidden md:inline-block break-words overflow-clip">
+              <div
+                class="tag ml-7 text-xs xl:text-base 2xl:text-lg 4xl:text-3xl text-slate-50 font-medium hidden lg:inline-block break-words overflow-clip"
+              >
                 Loans
               </div>
             </div>
             <!-- End of Loans -->
             <div
-              class="navNotifications border border-none rounded-xl h-max w-full my-3 px-2 py-1 flex justify-center md:justify-start items-center cursor-pointer hover:bg-gray-900 hover:w-max hover:px-3"
+              class="navNotifications border border-none rounded-xl h-max w-full my-2 md:my-3 px-2 py-1 flex justify-center lg:justify-start items-center cursor-pointer hover:bg-gray-900 hover:w-max hover:px-3"
             >
               <div class="icon">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 448 512"
                   fill="#fcfcfc"
-                  class="h-4 w-4"
+                  class="h-3 w-3 xs:h-4 2xl:h-7 3xl:h10 4xl:h-12 xs:w-4 2xl:w-7 3xl:w-10 4xl:w-12 "
                 >
                   <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
                   <path
@@ -186,23 +209,27 @@
                   />
                 </svg>
               </div>
-              <div class="tag ml-7 text-base text-slate-50 font-medium hidden md:inline-block break-words overflow-clip">
+              <div
+                class="tag ml-7 text-xs xl:text-base 2xl:text-lg 4xl:text-3xl text-slate-50 font-medium hidden lg:inline-block break-words overflow-clip"
+              >
                 Notifications
               </div>
             </div>
             <!-- End of Notifications -->
           </div>
           <!-- End of navBarTopItems  -->
-          <div class="navBarFooterItems w-full ml-2 flex flex-col items-center md:items-start xl:ml-0 mb-10">
+          <div
+            class="navBarFooterItems w-full flex flex-col items-center md:items-start xl:ml-0 justify-end min-h-max pb-4 4k:space-y-14"
+          >
             <div
-              class="navSupport border border-none rounded-xl h-max w-full my-3 px-2 py-1 flex justify-center md:justify-start items-center cursor-pointer hover:bg-gray-900 hover:w-max hover:px-3"
+              class="navSupport border border-none rounded-xl h-max w-full my-2 md:my-3 px-2 py-1 flex justify-center lg:justify-start items-center cursor-pointer hover:bg-gray-900 hover:w-max hover:px-3"
             >
               <div class="icon">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 512 512"
                   fill="#fcfcfc"
-                  class="h-4 w-4"
+                  class="h-3 w-3 xs:h-4 2xl:h-7 3xl:h10 4xl:h-12 xs:w-4 2xl:w-7 3xl:w-10 4xl:w-12 "
                 >
                   <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
                   <path
@@ -210,20 +237,22 @@
                   />
                 </svg>
               </div>
-              <div class="tag ml-7 text-base text-slate-50 font-medium hidden md:inline-block break-words overflow-clip">
+              <div
+                class="tag ml-7 text-xs xl:text-base 2xl:text-lg 4xl:text-3xl text-slate-50 font-medium hidden lg:inline-block break-words overflow-clip"
+              >
                 Support
               </div>
             </div>
             <!-- End of Support -->
             <div
-              class="navLogout border border-none rounded-xl h-max w-full my-3 px-2 py-1 flex justify-center md:justify-start items-center cursor-pointer hover:bg-gray-900 hover:w-max hover:px-3"
+              class="navLogout border border-none rounded-xl h-max w-full my-2 md:my-3 px-2 py-1 flex justify-center lg:justify-start items-center cursor-pointer hover:bg-gray-900 hover:w-max hover:px-3"
             >
               <div class="icon">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 512 512"
                   fill="#fcfcfc"
-                  class="h-4 w-4"
+                  class="h-3 w-3 xs:h-4 2xl:h-7 3xl:h10 4xl:h-12 xs:w-4 2xl:w-7 3xl:w-10 4xl:w-12 "
                 >
                   <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
                   <path
@@ -231,7 +260,9 @@
                   />
                 </svg>
               </div>
-              <div class="tag ml-7 text-base text-slate-50 font-medium hidden md:inline-block break-words overflow-clip">
+              <div
+                class="tag ml-7 text-xs xl:text-base 2xl:text-lg 4xl:text-3xl text-slate-50 font-medium hidden lg:inline-block break-words overflow-clip"
+              >
                 Logout
               </div>
             </div>
@@ -243,36 +274,333 @@
       </div>
       <!-- End of Nav Tabs -->
     </nav>
-    <section class="bg-black w-10/12 h-full grid grid-rows-5 md:grid-rows-3 
-    md:grid-cols-4 md:auto-cols-max">
-      <!-- Row 1 -->
+    <!-- End of navBar -->
+    <section
+      class="w-11/12 md:w-10/12 ml-auto h-full md:h-full grid grid-rows-10 portrait:grid-rows-10 md:grid-rows-3 grid-cols-1 portrait:grid-cols-1 md:grid-cols-4 min-h-775px 2xl:min-h-1000px 3xl:min-h-1100px 4xl:min-h-1200px 5xl:min-h-1300px 4k:min-h-1800px uw:min-h-2000px mt-2 scrollbar-hide"
+    >
       <div
-        class="md:col-span-3 border border-none rounded-3xl mx-1 my-1 bg-slate-900"
+        class="gridAccount order-2 portrait:order-2 md:order-1 col-span-1 row-span-2 portrait:col-span-1 portrait:row-span-2 md:col-span-3 md:row-span-1 border border-none rounded-3xl md:mx-1 my-1 py-4 px-3 xl:px-8 bg-slate-950 min-h-fit max-w-full relative"
       >
-        <article class="">Article 1</article>
+        <!-- Left Arrow -->
+        <button
+          class="btnLeft absolute top-1/2 left-2 transform -translate-y-1/2 h-6 lg:h-8 2xl:h-10 3xl:h-12 4xl:h-20 5xl:h-24 w-8 lg:w-6 2xl:w-8 3xl:w-10 4xl:w-12 5xl:w-14 md:text-base lg:text-lg 2xl:text-2xl 5xl:text-5xl bg-gray-700 text-white pb-0.5 2xl:pb-1 rounded-full"
+          id="prev"
+        >
+          &larr;
+        </button>
+        <!-- Right Arrow -->
+        <button
+          class="btnRight absolute top-1/2 right-2 transform -translate-y-1/2 h-6 lg:h-8 2xl:h-10 3xl:h-12 4xl:h-20 5xl:h-24 w-8 lg:w-6 2xl:w-8 3xl:w-10 4xl:w-12 5xl:w-14 text-base lg:text-lg 2xl:text-2xl 5xl:text-5xl bg-gray-700 text-white pb-0.5 2xl:pb-1 rounded-full"
+          id="next"
+        >
+          &rarr;
+        </button>
+        <div class="accounts  w-full h-full min-h-max max-w-full overflow-x-auto">
+          
+        <div
+          class="flex justify-around items-center min-h-max h-full w-full overflow-x-auto scrollbar-hide"
+        >
+          <div
+            class="flex flex-col 4xl:space-y-2 5xl:space-y-3 4k:space-y-10 text-xxs xs:text-xs sm:text-sm md:text-base 2xl:text-xl 3xl:text-2xl 4xl:text-4xl 4k:text-5xl min-h-28 md:min-h-40 2xl:min-h-44 3xl:min-h-52 4xl:min-h-56 5xl:min-h-96 4k:min-h-128 min-w-48 md:min-w-60 2xl:min-w-80 3xl:min-w-96 4xl:min-w-128 5xl:min-w-192 4k:min-w-256 uw:min-w-288 border border-double rounded-2xl justify-center items-center text-slate-400 bg-slate-900 border-slate-600 hover:border-lime-300">
+            <p>Account</p>
+            <p class="mb-1 md:mb-5 xl:mb-10">xxxxxxxxx</p>
+            <p>Total Balance</p>
+            <p class="text-lime-200">$12345</p>
+          </div>
+          <div
+            class="flex flex-col 4xl:space-y-2 5xl:space-y-3 4k:space-y-10 text-xxs xs:text-xs sm:text-sm md:text-base 2xl:text-xl 3xl:text-2xl 4xl:text-4xl 4k:text-5xl min-h-28 md:min-h-40 2xl:min-h-44 3xl:min-h-52 4xl:min-h-56 5xl:min-h-96 4k:min-h-128 min-w-48 md:min-w-60 2xl:min-w-80 3xl:min-w-96 4xl:min-w-128 5xl:min-w-192 4k:min-w-256 uw:min-w-288 border border-double rounded-2xl justify-center items-center text-slate-400 ml-8 bg-slate-900 border-slate-600 hover:border-lime-300"
+          >
+            <p>Account</p>
+            <p class="mb-1 md:mb-5 xl:mb-10">xxxxxxxxx</p>
+            <p>Total Balance</p>
+            <p class="text-lime-200">$67891</p>
+          </div>
+          <div
+            class="flex flex-col 4xl:space-y-2 5xl:space-y-3 4k:space-y-10 text-xxs xs:text-xs sm:text-sm md:text-base 2xl:text-xl 3xl:text-2xl 4xl:text-4xl 4k:text-5xl min-h-28 md:min-h-40 2xl:min-h-44 3xl:min-h-52 4xl:min-h-56 5xl:min-h-96 4k:min-h-128 min-w-48 md:min-w-60 2xl:min-w-80 3xl:min-w-96 4xl:min-w-128 5xl:min-w-192 4k:min-w-256 uw:min-w-288 border border-double rounded-2xl justify-center items-center text-slate-400 ml-8 bg-slate-900 border-slate-600 hover:border-lime-300"
+          >
+            <p>Account</p>
+            <p class="mb-1 md:mb-5 xl:mb-10">xxxxxxxxx</p>
+            <p>Total Balance</p>
+            <p class="text-lime-200">$67891</p>
+          </div>
+          <div
+            class="flex flex-col space-y-4 2xl:space-y-8 5xl:space-y-10 4k:space-y-12  text-xxs xs:text-xs sm:text-sm md:text-base  2xl:text-xl 3xl:text-2xl 4xl:text-4xl 4k:text-5xl  min-h-28 md:min-h-40 2xl:min-h-44 3xl:min-h-52 4xl:min-h-56 5xl:min-h-96 4k:min-h-128 min-w-48 md:min-w-60 2xl:min-w-80 3xl:min-w-96 4xl:min-w-128 5xl:min-w-192 4k:min-w-256 uw:min-w-288 border border-double rounded-2xl justify-center items-center  text-slate-200 ml-8 bg-slate-900 border-slate-600 hover:border-lime-300"
+          >
+            <p>Open a new account</p>
+            <button
+              class="flex items-center justify-center h-5 2xl:h-10 4xl:h-14 5xl:h-20 uw:h-28 w-10 2xl:w-20 4xl:w-28 5xl:w-36 uw:w-44 2xl:text-3xl 4xl:text-4xl 5xl:text-5xl uw:text-6xl bg-lime-600 px-6 pb-1 3xl:pb-2 5xl:pb-1 text-center rounded-full border border-lime-600 text-xl hover:bg-slate-800 leading-none align-"
+            >
+              +
+            </button>
+          </div> 
+        </div> 
+        </div>
       </div>
+      <!-- Accounts -->
       <div
-        class="md:col-span-1 border border-none rounded-3xl mx-1 my-1 bg-slate-900"
+        class="gridProfile order-1 portrait:order-1 md:order-2 row-span-1 col-span-1 max-h-full h-full md:h-auto border border-none rounded-3xl md:mx-1 md:my-1  overflow-hidden bg-slate-950 min-h-max"
       >
-        <article class="">Article 2</article>
+        <div
+          class="w-full h-full flex flex-row portrait:flex-row md:flex-col items-center md:justify-center justify-around"
+        >
+          <div
+            class="imgName flex justify-around items-center w-full h-3/5 "
+          >
+            <div
+              class="max-h-max max-w-max mx-2 2xl:mx-8 4xl:mx-4 5xl:mx-8 4k:mx-10"
+            >
+              <img
+                src="/img/profile1.jpg"
+                alt="Profile Picture"
+                class="h-12 sm:h-14 md:h-18 lg:h-16 2xl:h-24 3xl:h-28 4xl:h-36 5xl:h-44 4k:h-60 uw:h-72 w-12 sm:w-14 md:w-18 lg:w-16 2xl:w-24 3xl:w-28 4xl:w-36 5xl:w-44 4k:w-60 uw:w-72 rounded-full"
+              />
+            </div>
+            <div class="w-max">
+              <h2
+                class="profileName text-sm sm:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl 4xl:text-5xl 5xl:text-6xl 4k:text-7xl uw:text-8xl font-semibold text-slate-300 "
+              >
+                John Doe
+              </h2>
+            </div>
+          </div>
+          <div
+            class="balance h-2/5 w-full flex flex-col justify-start items-center"
+          >
+            <p
+              class="text-gray-400 text-xs sm:text-sm md:text-lg lg:text-xl xl:text-2xl 3xl:text-3xl 4xl:text-5xl 5xl:text-6xl 4k:text-6xl uw:text-7xl"
+            >
+              Total Balance
+            </p>
+            <p
+              class="font-bold mt-1 text-slate-300 text-xs sm:text-sm md:text-lg lg:text-xl xl:text-2xl 3xl:text-3xl 4xl:text-5xl 5xl:text-6xl 4k:text-6xl uw:text-7xl"
+            >
+              $1,234.56
+            </p>
+          </div>
+        </div>
       </div>
-      <!-- Row 2 -->
+      <!-- Profile Total Balance ends -->
       <div
-        class="md:col-span-4 border border-none rounded-3xl mx-1 my-1 bg-slate-900"
+        class="transactionGrid h-full relative flex justify-center items-center col-span-1 row-span-2 portrait:col-span-1 portrait:row-span-2 md:row-span-1 md:col-span-4 order-3 border border-none rounded-3xl md:mx-1 bg-slate-950 overflow-hidden"
       >
-        <article class="">Article 3</article>
+        <div class="table-container max-w-full w-full h-full sm:px-7 scrollbar-hide">
+          <table
+            class="h-full w-full bg-slate-900 border-none border-slate-600 rounded-2xl text-slate-300 text-xxxs xs:text-xxs sm:text-xs md:text-xs lg:text-base 2xl:text-xl 3xl:text-2xl 4xl:text-3xl 4k:text-4xl"
+          >
+            <thead >
+              <tr class="text-center ">
+                <th class=" px-1 py-1 xs:px-4 xs:py-2 4k:py-4 text-lime-400">Account No.</th>
+                <th class=" px-1 py-1 xs:px-4 xs:py-2 4k:py-4 text-lime-400">Amount</th>
+                <th class=" px-1 py-1 xs:px-4 xs:py-2 4k:py-4 text-lime-400">Timestamp</th>
+                <th class=" px-1 py-1 xs:px-4 xs:py-2 4k:py-4 text-lime-400">From/To</th>
+                <th class=" px-1 py-1 xs:px-4 xs:py-2 4k:py-4 text-lime-400">Transaction Type</th>
+                <th class=" px-1 py-1 xs:px-4 xs:py-2 4k:py-4 text-lime-400"></th>
+              </tr>
+            </thead>
+            <div>
+              <tbody class="border-none border-spacing-0">
+              <tr class="text-center">
+                <td class=" px-1 py-1 xs:px-4 xs:py-2 4k:py-4">123456789</td>
+                <td class=" px-1 py-1 xs:px-4 xs:py-2 4k:py-4">$500.00</td>
+                <td class=" px-1 py-1 xs:px-4 xs:py-2 4k:py-4">2023-05-24 10:30 AM</td>
+                <td class=" px-1 py-1 xs:px-4 xs:py-2 4k:py-4">Bank</td>
+                <td class=" px-1 py-1 xs:px-4 xs:py-2 4k:py-4">Deposit</td>
+                <td class=" px-1 py-1 xs:px-4 xs:py-2 4k:py-4 text-center text-green-500">&larr;</td>
+              </tr>
+              <tr class="text-center">
+                <td class=" px-1 py-1 xs:px-4 xs:py-2 4k:py-4">987654321</td>
+                <td class=" px-1 py-1 xs:px-4 xs:py-2 4k:py-4">$200.00</td>
+                <td class=" px-1 py-1 xs:px-4 xs:py-2 4k:py-4">2023-05-23 02:45 PM</td>
+                <td class=" px-1 py-1 xs:px-4 xs:py-2 4k:py-4">Online Store</td>
+                <td class=" px-1 py-1 xs:px-4 xs:py-2 4k:py-4">Purchase</td>
+                <td class=" px-1 py-1 xs:px-4 xs:py-2 4k:py-4 text-center text-red-500">&rarr;</td>
+              </tr>
+              <tr class="text-center">
+                <td class=" px-1 py-1 xs:px-4 xs:py-2 4k:py-4">987654321</td>
+                <td class=" px-1 py-1 xs:px-4 xs:py-2 4k:py-4">$200.00</td>
+                <td class=" px-1 py-1 xs:px-4 xs:py-2 4k:py-4">2023-05-23 02:45 PM</td>
+                <td class=" px-1 py-1 xs:px-4 xs:py-2 4k:py-4">Online Store</td>
+                <td class=" px-1 py-1 xs:px-4 xs:py-2 4k:py-4">Purchase</td>
+                <td class=" px-1 py-1 xs:px-4 xs:py-2 4k:py-4 text-center text-red-500">&rarr;</td>
+              </tr>
+              <tr class="text-center">
+                <td class=" px-1 py-1 xs:px-4 xs:py-2 4k:py-4">987654321</td>
+                <td class=" px-1 py-1 xs:px-4 xs:py-2 4k:py-4">$200.00</td>
+                <td class=" px-1 py-1 xs:px-4 xs:py-2 4k:py-4">2023-05-23 02:45 PM</td>
+                <td class=" px-1 py-1 xs:px-4 xs:py-2 4k:py-4">Online Store</td>
+                <td class=" px-1 py-1 xs:px-4 xs:py-2 4k:py-4">Purchase</td>
+                <td class=" px-1 py-1 xs:px-4 xs:py-2 4k:py-4 text-center text-red-500">&rarr;</td>
+              </tr>
+              <tr class="text-center">
+                <td class=" px-1 py-1 xs:px-4 xs:py-2 4k:py-4">123459876</td>
+                <td class=" px-1 py-1 xs:px-4 xs:py-2 4k:py-4">$150.00</td>
+                <td class=" px-1 py-1 xs:px-4 xs:py-2 4k:py-4">2023-05-22 11:15 AM</td>
+                <td class=" px-1 py-1 xs:px-4 xs:py-2 4k:py-4">ATM</td>
+                <td class=" px-1 py-1 xs:px-4 xs:py-2 4k:py-4">Withdrawal</td>
+                <td class=" px-1 py-1 xs:px-4 xs:py-2 4k:py-4 text-center text-red-500">&rarr;</td>
+              </tr>
+              <tr class="text-center">
+                <td class=" px-1 py-1 xs:px-4 xs:py-2 4k:py-4">123459876</td>
+                <td class=" px-1 py-1 xs:px-4 xs:py-2 4k:py-4">$150.00</td>
+                <td class=" px-1 py-1 xs:px-4 xs:py-2 4k:py-4">2023-05-22 11:15 AM</td>
+                <td class=" px-1 py-1 xs:px-4 xs:py-2 4k:py-4">ATM</td>
+                <td class=" px-1 py-1 xs:px-4 xs:py-2 4k:py-4">Withdrawal</td>
+                <td class=" px-1 py-1 xs:px-4 xs:py-2 4k:py-4 text-center text-red-500">&rarr;</td>
+              </tr>
+              <tr class="text-center">
+                <td class=" px-1 py-1 xs:px-4 xs:py-2 4k:py-4">123459876</td>
+                <td class=" px-1 py-1 xs:px-4 xs:py-2 4k:py-4">$150.00</td>
+                <td class=" px-1 py-1 xs:px-4 xs:py-2 4k:py-4">2023-05-22 11:15 AM</td>
+                <td class=" px-1 py-1 xs:px-4 xs:py-2 4k:py-4">ATM</td>
+                <td class=" px-1 py-1 xs:px-4 xs:py-2 4k:py-4">Withdrawal</td>
+                <td class=" px-1 py-1 xs:px-4 xs:py-2 4k:py-4 text-center text-red-500">&rarr;</td>
+              </tr>
+            </tbody>
+            </div>
+          </table>
+        </div>
       </div>
-      <!-- Row 3 -->
+      <!-- Transactions table -->
       <div
-        class="md:col-span-3 border border-none rounded-3xl mx-1 my-1 bg-slate-900"
+        class="col-span-1 row-span-3 portrait:col-span-1 portrait:row-span-3 md:row-span-1 md:col-span-2 order-4 border border-none rounded-3xl md:mx-1 my-1 bg-slate-950 max-h-full flex items-center justify-center"
       >
-        <article class="">Article 4</article>
+        <div class="text-white text-center  max-w-full w-full h-full xs:px-12 md:px-5 py-1">
+          <div class="max-w-full h-full">
+            <canvas id="graphCanvas" class="max-w-full max-h-full"></canvas>
+          </div>
+        </div>
       </div>
+      <!-- Graph -->
       <div
-        class="md:col-span-1 border border-none rounded-3xl mx-1 my-1 bg-slate-900"
+        class="row-span-2 col-span-1 portrait:row-span-2 portrait:col-span-1 md:row-span-1 md:col-span-2 order-5 border border-none rounded-3xl md:mx-1 md:my-1 bg-slate-950 relative overflow-y-auto min-h-max scrollbar-hide"
       >
-        <article class=" ">Article 5</article>
+        <div class="flex flex-col justify-evenly w-full h-full">
+          <div
+            class="min-h-32 md:min-h-40 lg:min-h-44 2xl:min-h-64 3xl:min-h-80 4xl:min-h-96 5xl:min-h-128 4k:min-h-128 lg:h-44 2xl:h-64 3xl:h-80 4xl:h-96 5xl:h-128 4k:h-128 uw:h-160 w-full md:my-8 relative"
+          >
+            <div class="absolute right-0 top-0 w-1/6  h-full">
+              <div class="gradient-blur"></div>
+            </div>
+            <div
+              class="h-full w-full flex flex-col items-center justify-center"
+            >
+              <div
+                class="flex items-start space-x-12 px-6 justify-around max-h-full h-full w-full overflow-x-auto scrollbar-hide"
+              >
+                <!-- Start of Card1 -->
+                <div
+                  class="bg-gray-900 text-white rounded-xl shadow-lg min-w-60 lg:min-w-72 2xl:min-w-96 3xl:min-w-128 4xl:min-w-160 5xl:min-w-192 4k:min-w-224 uw:min-w-256 h-full relative"
+                >
+                  <div
+                    class="absolute top-8 lg:top-10 2xl:top-16 3xl:top-20 5xl:top-32 left-8 lg:left-12 2xl:left-12 3xl:left-16 4xl:left-20 5xl:left-36 w-7 lg:w-9 2xl:w-16 4xl:w-24 uw:w-32 h-4 lg:h-6 2xl:h-10 4xl:h-16 uw:h-20 rounded-lg overflow-hidden shadow-inner"
+                  >
+                    <div
+                      class="h-full w-full bg-gradient-to-r from-gray-400 to-gray-600"
+                    ></div>
+                  </div>
+                  <div
+                    class="absolute bottom-8 lg:bottom-10 2xl:bottom-16 3xl:bottom-20 4xl:bottom-24 5xl:bottom-32 left-2 lg:left-3 2xl:left-4 3xl:left-5 4xl:left-6 5xl:left-8 text-xxs lg:text-xs 3xl:text-2xl 4xl:text-3xl 5xl:text-4xl uw:text-6xl font-mono tracking-widest"
+                  >
+                    1234 5678 9012 3456
+                  </div>
+                  <div class="absolute bottom-5 lg:bottom-6 2xl:bottom-12 3xl:bottom-14 4xl:bottom-16 uw:bottom-20 left-2 lg:left-3 2xl:left-4 3xl:left-5 4xl:left-6 5xl:left-8 text-xxxs lg:text-xxs 3xl:text-lg 4xl:text-xl 5xl:text-2xl uw:text-4xl">
+                    VALID THRU <span class="font-semibold">12/24</span>
+                  </div>
+                  <div
+                    class="absolute bottom-1 lg:bottom-2 2xl:bottom-5 4xl:bottom-6 5xl:bottom-8 left-2 lg:left-3 2xl:left-4 3xl:left-5 4xl:left-6 5xl:left-8 text-xxs 3xl:text-xl 4xl:text-2xl 5xl:text-3xl uw:text-4xl font-semibold uppercase"
+                  >
+                    John Doe
+                  </div>
+                  <div
+                    class="absolute top-1 lg:top-2 right-2 2xl:top-6 2xl:right-6 text-base lg:text-lg 2xl:text-2xl 3xl:text-4xl 4xl:text-5xl 5xl:text-6xl uw:text-7xl font-bold"
+                  >
+                    BANK
+                  </div>
+                  <div
+                    class="absolute bottom-2 lg:bottom-3 2xl:bottom-8 right-2 2xl:right-8 text-xs lg:text-sm 2xl:text-lg 3xl:text-2xl 4xl:text-3xl 5xl:text-4xl uw:text-6xl font-semibold"
+                  >
+                    Visa
+                  </div>
+                </div>
+                <!-- End of Card1
+                Start of Card2 -->
+                <div
+                  class="bg-gray-900 text-white rounded-xl shadow-lg min-w-60 lg:min-w-72 2xl:min-w-96 3xl:min-w-128 4xl:min-w-160 5xl:min-w-192 4k:min-w-224 uw:min-w-256 h-full mx-4 relative"
+                >
+                  <div
+                    class="absolute top-8 lg:top-10 2xl:top-16 3xl:top-20 5xl:top-32 left-8 lg:left-12 2xl:left-12 3xl:left-16 4xl:left-20 5xl:left-36 w-7 lg:w-9 2xl:w-16 4xl:w-24 uw:w-32 h-4 lg:h-6 2xl:h-10 4xl:h-16 uw:h-20 rounded-lg overflow-hidden shadow-inner"
+                  >
+                    <div
+                      class="h-full w-full bg-gradient-to-r from-gray-400 to-gray-600"
+                    ></div>
+                  </div>
+                  <div
+                    class="absolute bottom-8 lg:bottom-10 2xl:bottom-16 3xl:bottom-20 4xl:bottom-24 5xl:bottom-32 left-2 lg:left-3 2xl:left-4 3xl:left-5 4xl:left-6 5xl:left-8 text-xxs lg:text-sm 3xl:text-2xl 4xl:text-3xl 5xl:text-4xl uw:text-6xl font-mono tracking-widest"
+                  >
+                    1234 5678 9012 3456
+                  </div>
+                  <div class="absolute bottom-5 lg:bottom-6 2xl:bottom-12 3xl:bottom-14 4xl:bottom-16 uw:bottom-20 left-2 lg:left-3 2xl:left-4 3xl:left-5 4xl:left-6 5xl:left-8 text-xxxs lg:text-xxs 3xl:text-lg 4xl:text-xl 5xl:text-2xl uw:text-4xl">
+                    VALID THRU <span class="font-semibold">12/24</span>
+                  </div>
+                  <div
+                    class="absolute bottom-1 lg:bottom-2 2xl:bottom-5 4xl:bottom-6 5xl:bottom-8 left-2 lg:left-3 2xl:left-4 3xl:left-5 4xl:left-6 5xl:left-8 text-xxs 3xl:text-xl 4xl:text-2xl 5xl:text-3xl uw:text-4xl font-semibold uppercase"
+                  >
+                    John Doe
+                  </div>
+                  <div
+                    class="absolute top-1 lg:top-2 right-2 2xl:top-6 2xl:right-6 text-base lg:text-lg 2xl:text-2xl 3xl:text-4xl 4xl:text-5xl 5xl:text-6xl uw:text-7xl font-bold"
+                  >
+                    BANK
+                  </div>
+                  <div
+                    class="absolute bottom-2 lg:bottom-3 2xl:bottom-8 right-2 2xl:right-8 text-xs lg:text-sm 2xl:text-lg 3xl:text-2xl 4xl:text-3xl 5xl:text-4xl uw:text-6xl font-semibold"
+                  >
+                    Visa
+                  </div>
+                </div>
+                <!-- End of Card2
+                Start of Card3 -->
+                <div
+                  class="bg-gray-900 text-white rounded-xl shadow-lg min-w-60 lg:min-w-72 2xl:min-w-96 3xl:min-w-128 4xl:min-w-160 5xl:min-w-192 4k:min-w-224 uw:min-w-256 h-full mx-4 relative"
+                >
+                  <div
+                    class="absolute top-8 lg:top-10 2xl:top-16 3xl:top-20 5xl:top-32 left-8 lg:left-12 2xl:left-12 3xl:left-16 4xl:left-20 5xl:left-36 w-7 lg:w-9 2xl:w-16 4xl:w-24 uw:w-32 h-4 lg:h-6 2xl:h-10 4xl:h-16 uw:h-20 rounded-lg overflow-hidden shadow-inner"
+                  >
+                    <div
+                      class="h-full w-full bg-gradient-to-r from-gray-400 to-gray-600"
+                    ></div>
+                  </div>
+                  <div
+                    class="absolute bottom-8 lg:bottom-10 2xl:bottom-16 3xl:bottom-20 4xl:bottom-24 5xl:bottom-32 left-2 lg:left-3 2xl:left-4 3xl:left-5 4xl:left-6 5xl:left-8 text-xxs lg:text-sm 3xl:text-2xl 4xl:text-3xl 5xl:text-4xl uw:text-6xl font-mono tracking-widest"
+                  >
+                    1234 5678 9012 3456
+                  </div>
+                  <div class="absolute bottom-5 lg:bottom-6 2xl:bottom-12 3xl:bottom-14 4xl:bottom-16 uw:bottom-20 left-2 lg:left-3 2xl:left-4 3xl:left-5 4xl:left-6 5xl:left-8 text-xxxs lg:text-xxs 3xl:text-lg 4xl:text-xl 5xl:text-2xl uw:text-4xl">
+                    VALID THRU <span class="font-semibold">12/24</span>
+                  </div>
+                  <div
+                    class="absolute bottom-1 lg:bottom-2 2xl:bottom-5 4xl:bottom-6 5xl:bottom-8 left-2 lg:left-3 2xl:left-4 3xl:left-5 4xl:left-6 5xl:left-8 text-xxs 3xl:text-xl 4xl:text-2xl 5xl:text-3xl uw:text-4xl font-semibold uppercase"
+                  >
+                    John Doe
+                  </div>
+                  <div
+                    class="absolute top-1 lg:top-2 right-2 2xl:top-6 2xl:right-6 text-base lg:text-lg 2xl:text-2xl 3xl:text-4xl 4xl:text-5xl 5xl:text-6xl uw:text-7xl font-bold"
+                  >
+                    BANK
+                  </div>
+                  <div
+                    class="absolute bottom-2 lg:bottom-3 2xl:bottom-8 right-2 2xl:right-8 text-xs lg:text-sm 2xl:text-lg 3xl:text-2xl 4xl:text-3xl 5xl:text-4xl uw:text-6xl font-semibold"
+                  >
+                    Visa
+                  </div>
+                </div>
+                End of Card3
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+      <!-- Cards -->
     </section>
   </body>
 </html>
