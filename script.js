@@ -434,9 +434,3 @@ const data2 = {
     "April 15, 2023, 11:20 AM: Michael Smith was added to beneficiaries",
   ],
 };
-
-
-console.log("data1");
-console.log(data1);
-console.log("data2");
-console.log(data2);
